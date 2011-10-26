@@ -10,6 +10,19 @@
 //= require jquery-ui-1.8.16.custom.min.js
 //= require_self
 
+$(document).ready(function(){
+
+	//Hide (Collapse) the toggle containers on load
+	$(".clickT").hide();
+
+	//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+	$("h4.trigger").click(function(){
+		$(this).toggleClass("active").next().slideToggle("slow");
+		return false; //Prevent the browser jump to the link anchor
+	});
+
+});
+
   $("nav a").live('ajax:success', function(evt, data, status, xhr){
     $("#main").html(data);
   });
@@ -19,7 +32,6 @@
   });
   
   $(".slot .destroy").live('ajax:success', function(evt, data, status, xhr){
-    console.log("destroy");
     $(this).parent().parent().fadeOut(3000);
   });
   
@@ -31,7 +43,5 @@
     $("#main").html(data);
   });
   
-  $("article.slot").click(function(){
-    $(this).toggle("slow");
-  });
+  
   
