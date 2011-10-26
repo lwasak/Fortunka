@@ -40,5 +40,4 @@ gem 'bourbon'
 gem 'thin'
 gem 'wirble'
 gem 'hirb'
-gem 'nifty-generators'
-gem "mocha", :group => :test
+

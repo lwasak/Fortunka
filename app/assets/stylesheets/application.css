@@ -59,7 +59,7 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 a { color: #00e; }
 a:visited { color: #551a8b; }
-nav a:visited { color: #E0EFF1; }
+header nav a:visited { color: #E0EFF1; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
@@ -260,7 +260,7 @@ header nav ul li{
 	display:inline;
 }
 
-nav a{
+header nav a{
 	padding:20px;
 	color:white;
 	text-decoration:none;
@@ -268,6 +268,42 @@ nav a{
 	background-color:#327CCB;
 	border:3px solid #fff;
 }
+
+nav.pagination{
+  margin: 15px;
+}
+
+nav.pagination>span{
+  outline: 1px solid black;
+  padding: 2px;
+  margin: 5px;
+}
+
+span.current{
+  outline: 1px solid red;
+}
+
+span.last{
+
+}
+
+span.first{
+
+}
+
+span.page{
+
+}
+
+span.next{
+
+}
+
+span.last{
+
+}
+
+
 
 aside{
 	color:white;
@@ -291,10 +327,7 @@ aside{
 article header{
 	margin-bottom:50px;
 	padding-bottom:30px;
-	width:700px;
-	-webkit-box-shadow:0 45px 60px -60px #AAA;
-	   -moz-box-shadow:0 45px 60px -60px #AAA;
-	        box-shadow:0 45px 60px -60px #AAA;
+	width:700px;	
 }
 
 article footer{
@@ -320,6 +353,7 @@ article footer{
 /*============================================ MOJE =====================================*/
 
 .slot{
+      min-height: 25px;
       -webkit-box-shadow:5px 5px 12px #AAA;
       -moz-box-shadow:5px 5px 12px #AAA;
       box-shadow:5px 5px 12px #AAA;
@@ -336,6 +370,8 @@ article footer{
 .slot>header{
   margin-bottom:5px;
   padding-bottom:15px;
+  margin-left:5px;
+  padding-left:15px;
   float:right;
   width:inherit;
 }
