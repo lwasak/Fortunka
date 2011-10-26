@@ -1,0 +1,10 @@
+<article id="slot">
+  <header>
+    <%= link_to 'Show', @fortune %>
+    <%= link_to 'Edit', edit_fortune_path(@fortune) %>
+
+  </header>
+
+    <%= @fortune.body %>    
+
+</article>

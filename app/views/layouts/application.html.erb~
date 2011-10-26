@@ -1,0 +1,74 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+	<meta name="description" content="Fortunka in biolderplate.">
+	<meta name="author" content="Łukasz Wasak">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- 	<script src="js/libs/modernizr-2.0.min.js"></script> -->
+<!-- 	<script src="js/libs/respond.min.js"></script> -->
+	<%= stylesheet_link_tag "application" %>
+	<%= javascript_include_tag :application %>
+
+	<%= csrf_meta_tag %>
+	<%= yield(:head) %>
+
+</head>
+<body>
+	<div id="header-container">
+		<header class="wrapper">
+			<h1 id="title">FORTUNKA</h1>
+			<nav>
+				<ul>
+					<li><%= link_to "Fortunka", fortunes_path, :remote => true  %></li>
+					<li><%= link_to "New Fortune", new_fortune_path, :id => "new_f", :remote => true %></li>
+					<li><%= link_to "Random", {:action => :randf}, :remote => true  %></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+	<div id="main" class="wrapper">
+<!--		<aside>
+			<h3>Something aside</h3>
+		</aside>-->
+		<article>
+
+			<% flash.each do |name, msg| %>
+			  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+			<% end %>
+			<%= content_tag :h1, yield(:title) if show_title? %>
+			<%= yield %>
+
+		</article>
+	</div>
+	<div id="footer-container">
+		<footer class="wrapper">
+			<h3>A nice footer</h3>
+		</footer>
+	</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+<script>
+	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+</body>
+</html>
+
