@@ -6,4 +6,27 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-1.6.2.min.js
+//= require jquery-ui-1.8.16.custom.min.js
+//= require_self
+
+  $("nav a").live('ajax:success', function(evt, data, status, xhr){
+    $("#main").html(data);
+  });
+  
+  $(".slot .destroy").live('ajax:success', function(evt, data, status, xhr){
+    console.log("destroy");
+    $(this).parent().parent().effect("explode");
+  });
+  
+  $(".slot .edit").live('ajax:success', function(evt, data, status, xhr){
+    $("#main").html(data);
+  });
+  
+  $(".slot .show").live('ajax:success', function(evt, data, status, xhr){
+    $("#main").html(data);
+  });
+  
+  
+
 

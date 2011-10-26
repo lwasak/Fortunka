@@ -319,7 +319,7 @@ article footer{
 
 /*============================================ MOJE =====================================*/
 
-#slot{
+.slot{
       -webkit-box-shadow:5px 5px 12px #AAA;
       -moz-box-shadow:5px 5px 12px #AAA;
       box-shadow:5px 5px 12px #AAA;
@@ -333,7 +333,7 @@ article footer{
       padding: 10px;
 }
 
-#slot>header{
+.slot>header{
   margin-bottom:5px;
   padding-bottom:15px;
   float:right;
