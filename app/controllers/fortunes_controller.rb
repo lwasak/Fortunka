@@ -80,7 +80,7 @@ class FortunesController < ApplicationController
   # DELETE /fortunes/1.json
   def destroy
     @fortune = Fortune.find(params[:id])
-    #@fortune.destroy
+    @fortune.destroy
 
     respond_to do |format|
       format.html { redirect_to fortunes_url }

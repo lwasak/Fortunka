@@ -1,15 +1,10 @@
-<article>
-<header><% title "Fortune" %></header>
+<p id="notice"><%= notice %></p>
 
 <p>
+  <b><%= fortune.title %></b>
   <%= @fortune.body %>
 </p>
 
-  <footer style="float:right;">
-    <p>
-	<%= link_to "Edit", edit_fortune_path(@fortune) %> |
-	<%= link_to "Destroy", @fortune, :confirm => 'Are you sure?', :method => :delete %> |
-	<%= link_to "View All", fortunes_path %>
-    </p>
-  </footer>
-</article>
+
+<%= link_to 'Edit', edit_fortune_path(@fortune) %> |
+<%= link_to 'Back', fortunes_path %>

@@ -8,7 +8,7 @@ class FortunesController < ApplicationController
   end
   
   def index
-    @fortunes = Fortune.all.page(params[:page]).per(5)
+    @fortunes = Fortune.page(params[:page]).per(5)
     respond_to do |format|
       format.html # index.html.erb
     end
@@ -55,7 +55,7 @@ class FortunesController < ApplicationController
 
     respond_to do |format|
       if @fortune.save
-        format.html { redirect_to @fortune, notice: 'Fortune was successfully created.' }
+        format.html { redirect_to :index, notice: 'Fortune was successfully created.' }
       else
         format.html { render action: "new" }
       end
@@ -80,7 +80,7 @@ class FortunesController < ApplicationController
   # DELETE /fortunes/1.json
   def destroy
     @fortune = Fortune.find(params[:id])
-    #@fortune.destroy
+    @fortune.destroy
 
     respond_to do |format|
       format.html { redirect_to fortunes_url }

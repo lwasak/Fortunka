@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 	//Hide (Collapse) the toggle containers on load
 	$(".clickT").hide();
-
+	
 	//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
 	$("h4.trigger").click(function(){
 		$(this).toggleClass("active").next().slideToggle("slow");
@@ -32,7 +32,6 @@ $(document).ready(function(){
   });
   
   $(".slot .destroy").live('ajax:success', function(evt, data, status, xhr){
-    console.log("destroy");
     $(this).parent().parent().fadeOut(3000);
   });
   

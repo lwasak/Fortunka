@@ -1,7 +1,5 @@
 <%= title "Fortunki"%>
-<button id="go">&raquo; Run</button>
 
-<div id="block">Hello!</div>
 <%= paginate @fortunes , :remote => true %>
 <% @fortunes.each do |fortune| %>
 <article id="<%= dom_id fortune%>" class="slot">
