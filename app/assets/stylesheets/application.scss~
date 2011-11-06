@@ -20,7 +20,9 @@
 
 /* ====================== VARS ==================== */
     $blue: #4E9CB5;
-
+    $lb: #E0EFF1;
+    $green: #32CD32;
+    $orange: #FF8C00;
 /* ================================================ */
 
 
@@ -363,13 +365,16 @@ article footer{
 
 /*============================================ MOJE =====================================*/
 
+.green{
+  color: $green;
+}
+
 .slot{
       min-height: 25px;
       @include box-shadow(5px 5px 10px 0px #AAA);
-      
-      @include border-radius(20px);
-      
-      background: #E0EFF1;
+      @include border-radius(20px);    
+      background: $lb;
+      border: 3px solid $orange;
       margin: 5px;
       margin-bottom: 15px;
       padding: 10px;
@@ -383,6 +388,18 @@ article footer{
   float:right;
   width:inherit;
 }
+
+.comment_slot{
+      min-height: 25px;
+      @include box-shadow(5px 5px 10px 0px #AAA);
+      @include border-radius(20px);    
+      background: $orange;
+      border: 3px solid $lb;
+      margin: 5px;
+      margin-bottom: 15px;
+      padding: 10px;
+}
+
 
 
 /* =============================================================================

@@ -20,7 +20,9 @@
 
 /* ====================== VARS ==================== */
     $blue: #4E9CB5;
-
+    $lb: #E0EFF1;
+    $green: #32CD32;
+    $orange: #FF8C00;
 /* ================================================ */
 
 
@@ -363,13 +365,16 @@ article footer{
 
 /*============================================ MOJE =====================================*/
 
+.green{
+  color: $green;
+}
+
 .slot{
       min-height: 25px;
       @include box-shadow(5px 5px 10px 0px #AAA);
-      
-      @include border-radius(20px);
-      
-      background: #E0EFF1;
+      @include border-radius(20px);    
+      background: $lb;
+      border: 3px solid $orange;
       margin: 5px;
       margin-bottom: 15px;
       padding: 10px;
@@ -383,6 +388,18 @@ article footer{
   float:right;
   width:inherit;
 }
+
+.comment_slot{
+      min-height: 25px;
+      @include box-shadow(5px 5px 10px 0px #AAA);
+      @include border-radius(20px);    
+      background: $orange;
+      border: 3px solid $lb;
+      margin: 5px;
+      margin-bottom: 15px;
+      padding: 10px;
+}
+
 
 
 /* =============================================================================
@@ -450,4 +467,46 @@ article footer{
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
+}
+
+.simple_form label {
+  float: left;
+  width: 100px;
+  text-align: right;
+  margin: 2px 10px;
+}
+
+.simple_form div.input {
+  margin-bottom: 10px;
+}
+
+.simple_form div.boolean, .simple_form input[type='submit'] {
+  margin-left: 120px;
+}
+
+.simple_form div.boolean label, .simple_form label.collection_radio {
+  float: none;
+  margin: 0;
+}
+
+.simple_form label.collection_radio {
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+.simple_form .error {
+  clear: left;
+  margin-left: 120px;
+  font-size: 12px;
+  color: #D00;
+  display: block;
+}
+
+.simple_form .hint {
+  clear: left;
+  margin-left: 120px;
+  font-size: 12px;
+  color: #555;
+  display: block;
+  font-style: italic;
 }

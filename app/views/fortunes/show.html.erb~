@@ -1,10 +1,21 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="green"><b><%= notice %></b></p>
 
+<article class="slot">
+<header>
+    <%= link_to 'Edit', edit_fortune_path(@fortune),  remote: true, :class => "edit" %>
+    <%= link_to 'Destroy', @fortune, confirm: 'Are you sure?', method: :delete, remote: true, :class => "destroy" %>
+</header>
+
+<p><b><%= @fortune.title %></b></p>
 <p>
-  <b><%= fortune.title %></b>
   <%= @fortune.body %>
 </p>
+</article>
+<h2>Comments</h2>
+<%= render @fortune.comments %>
 
+<h2>Add a comment:</h2>
+<%= render "comments/form_comment" %>
 
 <%= link_to 'Edit', edit_fortune_path(@fortune) %> |
 <%= link_to 'Back', fortunes_path %>

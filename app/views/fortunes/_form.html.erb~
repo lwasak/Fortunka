@@ -1,5 +1,10 @@
-<%= form_for(@fortune) do |f| %>
-  <% if @fortune.errors.any? %>
+<%= simple_form_for @fortune  do |f| %>
+
+<%= f.error_messages %>
+<%= f.input :title %>
+<%= f.input :body %>
+
+<!--  <% if @fortune.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@fortune.errors.count, "error") %> prohibited this fortune from being saved:</h2>
 
@@ -22,5 +27,5 @@
   </div>
   <div class="actions">
     <%= f.submit %>
-  </div>
+  </div>-->
 <% end %>

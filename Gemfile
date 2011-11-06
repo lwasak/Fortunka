@@ -40,4 +40,4 @@ gem 'bourbon'
 gem 'thin'
 gem 'wirble'
 gem 'hirb'
-
+gem 'simple_form'
