@@ -1,0 +1,19 @@
+<!--<%= form_for([@fortune, @fortune.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>-->
+
+<%= simple_form_for [@fortune, @fortune.comments.build] do |f| %>
+  <%= f.input :author, :input_html => {:size => 40} %>
+  <%= f.input :body, :input_html => {:rows => 4, :cols => 40} %>
+  <%= f.button :submit %>
+<% end %>

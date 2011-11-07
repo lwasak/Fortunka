@@ -35,6 +35,10 @@ $(document).ready(function(){
     $(this).parent().parent().fadeOut(4000);
   });
   
+  $(".comment_slot .destroy").live('ajax:success', function(evt, data, status, xhr){
+    $(this).parent().fadeOut(4000);
+  });
+  
   $(".slot .edit").live('ajax:success', function(evt, data, status, xhr){
     $("#main").html(data);
   });

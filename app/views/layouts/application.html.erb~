@@ -37,7 +37,7 @@
 <!--		<aside>
 			<h3>Something aside</h3>
 		</aside>-->
-		<div id="test" title="test">test</div>
+
 		<article>
 
 			<% flash.each do |name, msg| %>
