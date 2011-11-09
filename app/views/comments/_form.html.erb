@@ -1,9 +1,9 @@
-<%= simple_form_for(@fortune) do |f| %>
+<%= simple_form_for(@comment) do |f| %>
   <%= f.error_notification %>
 
   <div class="inputs">
-    <%= f.input :title %>
-    <%= f.input :body :input_html => {:rows => 6}%>
+    <%= f.input :author %>
+    <%= f.input :body %>
   </div>
 
   <div class="actions">

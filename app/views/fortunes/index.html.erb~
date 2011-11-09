@@ -10,11 +10,9 @@
     <%= link_to 'Edit', edit_fortune_path(fortune),  remote: true, :class => "edit" %>
     <%= link_to 'Destroy', fortune, confirm: 'Are you sure?', method: :delete, remote: true, :class => "destroy" %>
   </header>
-  <h4 class="trigger"><a href="#">Toggle Header</a></h4>
+  <h4 class="trigger"><a href="#"><%= fortune.title %></a></h4>
   <div class="clickT">
     <%= fortune.body %>    
   </div>
 </article>
 <%end%> 
-
-

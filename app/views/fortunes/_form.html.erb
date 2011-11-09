@@ -1,32 +1,12 @@
-<!--<%= form_for(@fortune) do |f| %>
-  <% if @fortune.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@fortune.errors.count, "error") %> prohibited this fortune from being saved:</h2>
+<%= simple_form_for(@fortune) do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% @fortune.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+  <div class="inputs">
+    <%= f.input :title %>
+    <%= f.input :body, :input_html => {:rows => 6}%>
   </div>
 
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit %>
   </div>
-<% end %>-->
-
-<%= simple_form_for @fortune do |f| %>
-  <%= f.input :title, :input_html => {:size => 40} %>
-  <%= f.input :body, :input_html => {:rows => 4, :cols => 40} %>
-  <%= f.button :submit %>
 <% end %>

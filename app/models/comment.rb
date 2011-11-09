@@ -1,5 +1,8 @@
-class Comment < ActiveRecord::Base
-  validates :author, :presence => true
-  validates :body, :presence => true, :length => { :minimum => 2 }
-  belongs_to :fortune
+class Comment
+  include Mongoid::Document
+  field :author
+  field :body
+  embedded_in :fortune
+  validates_presence_of :author
+  validates_presence_of :body
 end

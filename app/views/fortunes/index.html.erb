@@ -4,8 +4,6 @@
 <% @fortunes.each do |fortune| %>
 <article id="<%= dom_id fortune%>" class="slot">
   <header>
-    <%= fortune.created_at %>
-    </br>
     <%= link_to 'Show', fortune,  remote: true, :class => "show" %>
     <%= link_to 'Edit', edit_fortune_path(fortune),  remote: true, :class => "edit" %>
     <%= link_to 'Destroy', fortune, confirm: 'Are you sure?', method: :delete, remote: true, :class => "destroy" %>
@@ -16,5 +14,3 @@
   </div>
 </article>
 <%end%> 
-
-
