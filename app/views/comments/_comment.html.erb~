@@ -1,6 +1,6 @@
 <article class="comment_slot">
 <p>
-  <b>Author:</b>
+  <b>Commenter:</b>
   <%= comment.author %>
 </p>
  
@@ -9,7 +9,7 @@
   <%= comment.body %>
 </p>
 
-<%= link_to 'Destroy Comment', [comments.fortune, comments],
+<%= link_to 'Destroy Comment', [comment.fortune, comment],
                :confirm => 'Are you sure?',
                :method => :delete, remote: true, :class => "destroy" %>
 </article>

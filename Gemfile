@@ -44,3 +44,4 @@ gem 'simple_form'
 gem "mongoid", "~> 2.3"
 gem "bson_ext", "~> 1.4"
 gem 'formtastic'
+gem "devise", ">= 1.4.7"

@@ -15,7 +15,10 @@
 <%= render @fortune.comments %>-->
 
 <h2>Add a comment:</h2>
+<% if user_signed_in? %>
 <%= render "comments/form_comment" %>
-
+<% else %>
+<p> You must log in first. To comment this fortune. </p>
+<% end %>
 
 <%= link_to 'Back', fortunes_path %>

@@ -11,22 +11,12 @@
   <%= @fortune.body %>
 </p>
 </article>
+<h2>Comments</h2>
+<%= render @fortune.comments %>-->
 
-<% if @fortune.comments.size > 0 %>
-  <h2>Comments</h2>
-  <% for comments in @fortune.comments %>
-    <h3><%= comments.name %></h3>
-    <p><%= comments.content %></p>
-  <% end %>
+<h2>Add a comment:</h2>
+<% if user_signed_in? %>
+<%= render "comments/form_comment" %>
 <% end %>
-
-<h2>New Comment</h2>
-
-<%= form_for [@fortune, Comments.new] do |f| %>
-  <p><%= f.label :author %> <%= f.text_field :author %></p>
-  <p><%= f.text_area :body, :rows => 10 %></p>
-  <p><%= f.submit %></p>
-<% end %>
-
 
 <%= link_to 'Back', fortunes_path %>

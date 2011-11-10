@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  
+  before_filter :authenticate_user!
   def create
     @fortune = Fortune.find(params[:fortune_id])
     @comment = @fortune.comments.create(params[:comment])
