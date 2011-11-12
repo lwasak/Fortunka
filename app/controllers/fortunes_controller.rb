@@ -15,8 +15,7 @@ class FortunesController < ApplicationController
   end
 
   def randf    
-    @fortune = Fortune.skip(rand(Fortune.count)).limit(1)
-    
+    @fortune = Fortune.skip(rand(Fortune.count)).limit(1)[0]
     respond_to do |format|
       format.html # randf.html.erb
     end
