@@ -2,7 +2,7 @@
 
 <article class="slot">
 <header>
-    <%= link_to 'Edit', edit_fortune_path(@fortune),  remote: true, :class => "edit" %>
+    <%= link_to '✎', edit_fortune_path(@fortune),  remote: true, :class => "edit" %>
     <%= link_to 'Destroy', @fortune, confirm: 'Are you sure?', method: :delete, remote: true, :class => "destroy" %>
 </header>
 
@@ -17,6 +17,8 @@
 <h2>Add a comment:</h2>
 <% if user_signed_in? %>
 <%= render "comments/form_comment" %>
+<% else %>
+<p> You must log in first. To comment this fortune. </p>
 <% end %>
 
 <%= link_to 'Back', fortunes_path %>
