@@ -40,7 +40,6 @@ gem 'bourbon'
 gem 'thin'
 gem 'wirble'
 gem 'hirb'
-gem 'simple_form'
 gem "mongoid", "~> 2.3"
 gem "bson_ext", "~> 1.4"
 gem 'formtastic'

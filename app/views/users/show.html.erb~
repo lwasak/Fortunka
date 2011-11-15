@@ -1,2 +1,7 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<p>User: <%= @user.name %></p>
+<p>e-mail: <%= @user.email %></p>
+
+<p> All comments of user <%= @user.name %></p>
+
+<%= render @user.comments %>

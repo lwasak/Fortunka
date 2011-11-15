@@ -9,7 +9,7 @@
   <%= comment.body %>
 </p>
 <% if user_signed_in? %>
-<%= link_to 'Destroy Comment', [comment.fortune, comment],
+<%= link_to '✖', [comment.fortune, comment],
                :confirm => 'Are you sure?',
                :method => :delete, remote: true, :class => "destroy" %>
 <%end%>

@@ -2,6 +2,13 @@ Simple post -> comment application on ruby on rails.
 
 The database is on mongoDB.
 
+There is an an file called data.json in main folder, it contains test data to upload to your mongo database.
+
+Use this command:
+
+mongoimport --drop -d lwasak -c fortunes data.json
+
+
 Application uses gems:
 
 -- simple_form (I will change it to formtastic)

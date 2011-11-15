@@ -1,8 +1,12 @@
+
 <article class="slot">
   <header>
+    
     <%= link_to '☞', @fortune %>
+    <% if user_signed_in? %>
     <%= link_to '✎', edit_fortune_path(@fortune) %>
     <%= link_to '✖', @fortune, confirm: 'Are you sure?', method: :delete %>
+    <%end%>
   </header>
   <p><%=@fortune.title%></p>
     <%= @fortune.body %>    

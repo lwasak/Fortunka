@@ -28,7 +28,7 @@
 				<ul>
 					
 					<li><%= link_to "Fortunka", fortunes_path, :remote => true  %></li>
-					<li><%= link_to "New Fortune", new_fortune_path, :id => "new_f", :remote => true %></li>	 -->
+					<li><%= link_to "New Fortune", new_fortune_path, :id => "new_f", :remote => true %></li>
 					<li><a href="/fortunes/randf" data-remote="true">Random</a></li>
 					<li><%= render 'layouts/devise_auth' %></li>
 				</ul>

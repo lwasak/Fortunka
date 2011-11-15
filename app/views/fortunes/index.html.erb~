@@ -4,7 +4,8 @@
 <% @fortunes.each do |fortune| %>
 <article id="<%= dom_id fortune%>" class="slot">
   <header>
-    <%= link_to 'Show', fortune,  remote: true, :class => "show" %>
+    <%= link_to '☞', fortune,  remote: true, :class => "show" %>
+    <% if user_signed_in? %>
     <%= link_to '✎', edit_fortune_path(fortune),  remote: true, :class => "edit" %>
     <%= link_to '✖', fortune, confirm: 'Are you sure?', method: :delete, remote: true, :class => "destroy" %>
   </header>

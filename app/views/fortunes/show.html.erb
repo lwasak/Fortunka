@@ -1,9 +1,11 @@
-<p id="notice" class="green"><b><%= notice %></b></p>
+<%= title @fortune.title%>
 
 <article class="slot">
 <header>
+    <% if user_signed_in? %>
     <%= link_to '✎', edit_fortune_path(@fortune),  remote: true, :class => "edit" %>
     <%= link_to '✖', @fortune, confirm: 'Are you sure?', method: :delete, remote: true, :class => "destroy" %>
+    <%end%>
 </header>
 
 <p><b><%= @fortune.title %></b></p>
@@ -12,13 +14,11 @@
 </p>
 </article>
 <h2>Comments</h2>
-<%= render @fortune.comments %>-->
+<%= render @fortune.comments %>
 
 <h2>Add a comment:</h2>
-<% if user_signed_in? %>
+
 <%= render "comments/form_comment" %>
-<% else %>
-<p> You must log in first. To comment this fortune. </p>
-<% end %>
+
 
 <%= link_to 'Back', fortunes_path %>
