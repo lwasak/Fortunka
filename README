@@ -11,7 +11,7 @@ mongoimport --drop -d lwasak -c fortunes data.json
 
 Application uses gems:
 
--- simple_form (I will change it to formtastic)
+-- formtastic
 -- kaminari
 -- mongoid
 -- sass & bourbon
